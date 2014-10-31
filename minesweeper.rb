@@ -5,7 +5,6 @@ class MineSwiper
   SIZE = 10
   MINE = 10
   
-
   def initialize
 
     @board = Array.new(SIZE+1){Array.new(SIZE+1,0)}
