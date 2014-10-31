@@ -5,6 +5,7 @@ class MineSwiper
   SIZE = 10
   MINE = 10
   
+
   def initialize
 
     @board = Array.new(SIZE+1){Array.new(SIZE+1,0)}
@@ -14,7 +15,7 @@ class MineSwiper
 
   def showBoard
     print "  "
-    for i in 1..SIZE-1
+    for i in 1..SIZE - 1
       print " #{i}"
     end
     print ("\n")
@@ -145,7 +146,7 @@ class MineSwiper
     
   end
 
-  def choseNumber
+  def chooseNumber
 
     while 1
       p "Choose number (xy)[1 to 9]"
@@ -195,7 +196,7 @@ class MineSwiper
     if @board[x][y] == -1
       @board_flag[x][y] = 1
       self.showBoard
-      p "FALSE.."
+      p "FAILED.."
       return true
     end
 
@@ -210,7 +211,7 @@ go = MineSwiper.new
 
 while 1
   go.showBoard
-  if go.choseNumber
+  if go.chooseNumber
     break
   end
 end
